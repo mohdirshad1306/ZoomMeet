@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:text="Zoom Wave"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_above="@id/bottom_layout"
+        android:layout_marginBottom="160dp"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/white"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_top"
+        android:padding="40dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meeting Id"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            android:backgroundTint="@color/my_primary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:id="@+id/meeting_id_input"
+                android:maxLength="5"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/my_primary"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/name_input"
+                android:textSize="18sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join a Meeting"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/join_btn"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corners"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create a Meeting"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:padding="12dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/create_btn"
+            android:textSize="16sp"
+            android:background="@drawable/rounded_corners"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
